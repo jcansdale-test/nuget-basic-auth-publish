@@ -12,6 +12,6 @@ jobs:
 
       - run: dotnet new console
 
-      - run: dotnet pack -p:RepositoryUrl=https://github.com/${{ dotnet.repository }} -p:Version=1.0.0
+      - run: dotnet pack -p:RepositoryUrl=https://github.com/${{ github.repository }} -p:Version=1.0.0
 
       - run: dotnet nuget push bin/Debug/*.pkg
